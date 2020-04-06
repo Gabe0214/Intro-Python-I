@@ -2,3 +2,9 @@
 # (try doing the same thing in the JS console and see what it outputs)
 
 # YOUR CODE HERE
+# JS--- Math.pow(2, 65536) === infinity
+
+a = 2
+b = 65536
+
+print(a ** b)

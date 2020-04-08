@@ -30,3 +30,30 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+def showCaly(year, month):
+  if isinstance(month, int) and isinstance(year, int):
+    print(calendar.month(year, month))
+  elif type(year) and type(month) is str:
+    month = datetime.now().month
+    year = datetime.now().year
+    print(calendar.month(year, month))
+
+def caly():
+  month = input("please insert Month: ")
+  year = input("Please insert Year: ")
+  if type(year) and type(month) is not int:
+    if month != "" or year != "":
+      month = int(month)
+      year = int(year)
+      showCaly(year, month)
+  if month == "" or year == "":
+    showCaly(year, month)
+
+caly()
+
+
+
+
+
